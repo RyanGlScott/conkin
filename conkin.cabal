@@ -27,7 +27,7 @@ flag Development
 
 library
   exposed-modules: Conkin
-  build-depends: base >=4.9 && <4.12
+  build-depends: base >=4.9 && <4.13
   default-language: Haskell2010
   if flag(development)
     ghc-options: -Wall -Wextra -Werror
@@ -36,7 +36,7 @@ test-suite doctests
   type: exitcode-stdio-1.0
   main-is: doctests.hs
   build-depends: base
-               , doctest >=0.11.2 && <0.12
+               , doctest >=0.11.2 && <0.17
                , pretty-show >= 1.6.13 && <2.0.0
   default-language: Haskell2010
   if flag(development)
@@ -47,8 +47,8 @@ test-suite readme
   type: exitcode-stdio-1.0
   main-is: README.lhs
   build-depends: base
-               , markdown-unlit >=0.4.0 && <0.5
-               , doctest >=0.11.2 && <0.12
+               , markdown-unlit >=0.4.0 && <0.6
+               , doctest >=0.11.2 && <0.17
                , pretty-show >= 1.6.13 && <2.0.0
                , data-default >= 0.7.0 && <0.8
                , conkin
